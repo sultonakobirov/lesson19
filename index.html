@@ -22,7 +22,7 @@
             <div class="indicators-ext" id="indicators-ext">
                 <div class="block velocity">
                     <span class="after">Скорость</span>
-                    <h3><span>60</span>км/ч</h3>
+                    <h3><span id="vlct" value="60">60</span>км/ч</h3>
                     <div class="button-cont">
                         <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
                         <button class="down" value="-1"><img src="./images/arrow.png" alt=""></button>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="block temperature">
                     <span class="after">Температура за окнами</span>
-                    <h3><span>20</span>°</h3>
+                    <h3><span id="tmprtr">20</span>°</h3>
                     <div class="button-cont">
                         <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
                         <button class="down" value="1"><img src="./images/arrow.png" alt=""></button>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="block wheels">
                     <span class="after">Диски</span>
-                    <h3><span>19</span></h3>
+                    <h3><span id="whl-rds">19</span></h3>
                     <div class="button-cont">
                         <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
                         <button class="down" value="1"><img src="./images/arrow.png" alt=""></button>
@@ -47,7 +47,7 @@
                 <div class="addition air-con">
                     <span class="after">Кондиционер</span>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input id="air-con" type="checkbox">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -61,10 +61,10 @@
             </div><!-- /ext -->
             <div class="indicators-int" id="indicators-int">
                 <span class="after">Цвет салона</span>
-                <div >
-                    <input class="black" type="radio" name="int-color" id="black" checked="true">
-                    <input class="white" type="radio" name="int-color" id="white">
-                    <input class="bright" type="radio" name="int-color" id="bright">
+                <div class="int-colors">
+                    <input class="toggle-btn black" type="radio" name="int-color" id="black" checked="true">
+                    <input class="toggle-btn white" type="radio" name="int-color" id="white">
+                    <input class="toggle-btn bright" type="radio" name="int-color" id="bright">
                 </div>
             </div><!-- /int -->
             <div class="addition ext-int">
