@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img-cont"> <img class="image" src="./images/exterior.png" alt=""> </div>
+        <div class="info">
+            <div class="power-reserve">
+                <h2><span id="battery">750</span><span>км</span></h2>
+            </div>
+            <div class="price">
+                <h2><span>$</span><span value="89990" id="price">89, 990</span></h2>
+            </div>
+        </div><!-- /info -->
+        <div class="indicators-cont" id="indicators-cont">
+            <div class="indicators-ext" id="indicators-ext">
+                <div class="block velocity">
+                    <span class="after">Скорость</span>
+                    <h3><span>60</span>км/ч</h3>
+                    <div class="button-cont">
+                        <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
+                        <button class="down" value="-1"><img src="./images/arrow.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="block temperature">
+                    <span class="after">Температура за окнами</span>
+                    <h3><span>20</span>°</h3>
+                    <div class="button-cont">
+                        <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
+                        <button class="down" value="1"><img src="./images/arrow.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="block wheels">
+                    <span class="after">Диски</span>
+                    <h3><span>19</span></h3>
+                    <div class="button-cont">
+                        <button class="up" value="1"><img src="./images/arrow.png" alt=""></button>
+                        <button class="down" value="1"><img src="./images/arrow.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="addition air-con">
+                    <span class="after">Кондиционер</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="addition long-version">
+                    <span class="after">Версия Long Range</span>
+                    <label class="switch">
+                        <input id="long-version" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div><!-- /ext -->
+            <div class="indicators-int" id="indicators-int">
+                <span class="after">Цвет салона</span>
+                <div >
+                    <input class="black" type="radio" name="int-color" id="black" checked="true">
+                    <input class="white" type="radio" name="int-color" id="white">
+                    <input class="bright" type="radio" name="int-color" id="bright">
+                </div>
+            </div><!-- /int -->
+            <div class="addition ext-int">
+                <span class="after">Вид автомобиля</span>
+                <label class="switch">
+                    <input class="ext-int-check" type="checkbox" checked="true">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div><!-- /indicators-cont -->
+    </div> <!-- /container -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
