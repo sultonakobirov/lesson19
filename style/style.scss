@@ -112,7 +112,7 @@
         width: 100%;
         justify-content: center;
         .after{
-            padding-right: 40px;
+            margin-right: 40px;
             @include after-conf()
         }
         .addition{
@@ -254,6 +254,23 @@
                     background-color: rgb(145, 138, 124);
                 }
                 @include radio-conf()
+            }
+        }
+    }
+}
+@media (max-width: 1420px) {
+    .container{
+        padding: 0;
+        width: 100%;
+        .img-cont{
+            width: 100%;
+        }
+        .indicators-cont{
+            //flex-wrap: wrap;
+            .indicators-ext{
+                flex-wrap: wrap;
+                width: 60%;
+                
             }
         }
     }
