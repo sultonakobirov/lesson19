@@ -1,4 +1,5 @@
 let doc = document
+let imgCont = doc.getElementById('img-cont')
 let extIntImage = doc.querySelector('.image')
 let extIntChanger = doc.querySelector('.ext-int-check')
 let intImageBlack = './images/interiorblack.jpg'
@@ -21,19 +22,16 @@ let wheel = doc.getElementById('whl-rds')
 let temperature = doc.getElementById('tmprtr')
 let upButtonWhl = doc.getElementById('upwhl')
 let downButtonWhl = doc.getElementById('downwhl')
-
 let inPrice = 89
 let wheelContent = parseInt(wheel.textContent)
 let maxRadius = 21
 let minRadius = 17
-
 let maxTemp = 55
 let minTemp = -30
 let upButtonTmp = doc.getElementById('uptmp')
 let downButtonTmp = doc.getElementById('downtmp')
 temperatureContent = temperature.textContent
 temperatureContent = parseInt(temperatureContent)
-
 let maxVel = 255
 let minVel = 0
 let upButtonVlc = doc.getElementById('upvlct')
@@ -41,7 +39,7 @@ let downButtonVlc = doc.getElementById('downvlct')
 let velocityContent = parseInt(velocity.textContent)
 let batteryContent = parseInt(battery.textContent)
 
-//ext-int view changer
+//ext-int config view changer
 let extIntFunction = (flex, none)=>{
     flex.style.display = 'flex'
     none.style.display = 'none'
@@ -67,44 +65,46 @@ function longVersionAirCon(airCon, longVersion){
         } 
     }
 }
-
+//exterior interoir image changer 
 extIntChanger.addEventListener('click', () => {
     if(extIntChanger.checked === true){
         extIntImage.setAttribute('src', extImage)
+        imgCont.setAttribute("style","height:500px");
         extIntFunction(exterior, interior)
     }else{
         extIntImage.src = intImageBlack
         interior.style.display = 'flex'
         exterior.style.display = 'none'
         indicatorCont.style.gap = '80px'
+        imgCont.setAttribute("style","height:700px");
         extIntFunction(interior, exterior)
     }
 })
-
-
-
+//you will know how velocity temperature affects on power reserve of the car 
 function upDownFunc(up, down, innum, min, max, indicontent, dist, distcontent){
     up.onclick = () => {
-        innum = innum+1
-        if (innum >= 80) {
-            distcontent = distcontent - 2
-            dist.textContent = distcontent
-        }
         indicontent.textContent = innum 
-            if (innum >= max) {
-                up.onclick = null
+            if (innum <= max) {
+                innum = innum + 1 
+                if (innum >= 80) {
+                    distcontent = distcontent - 2
+                    dist.textContent = distcontent
+                }
+            } else{
+                innum = innum + 0
             }
     }
     down.onclick = () => {
-        innum =innum - 1 
-        indicontent.textContent = innum
-        if (innum <= min) {
-            down.onclick = null
+        if (innum >= min) {
+            innum =innum - 1
+            if (innum <= 0) {
+                distcontent = distcontent - 10
+                dist.textContent = distcontent
+            }
+        }else{
+            innum =innum - 0
         }
-        if (innum <= 0) {
-            distcontent = distcontent - 10
-            dist.textContent = distcontent
-        }
+        indicontent.textContent = innum 
     }
 }
 upDownFunc(upButtonVlc, downButtonVlc, velocityContent, minVel, maxVel, velocity, battery, batteryContent)
