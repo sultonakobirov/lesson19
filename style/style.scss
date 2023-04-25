@@ -70,6 +70,7 @@
     .img-cont{
         width: 1200px;
         margin: 0 auto;
+        margin-bottom: 160px;
         display: flex;
         align-items: start;
         justify-content: center;
@@ -123,6 +124,7 @@
         .indicators-ext{
             display: flex;
             gap: 50px;
+            flex-wrap: wrap;
             .down{
                 rotate: 180deg;
                 &:hover{
@@ -258,15 +260,15 @@
         }
     }
 }
-@media (max-width: 1420px) {
+@media (max-width: 1020px) {
     .container{
         padding: 0;
         width: 100%;
+        gap: 50px;
         .img-cont{
             width: 100%;
         }
         .indicators-cont{
-            //flex-wrap: wrap;
             .indicators-ext{
                 flex-wrap: wrap;
                 width: 60%;
