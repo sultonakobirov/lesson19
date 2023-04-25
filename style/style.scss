@@ -248,10 +248,10 @@
                 @include radio-conf()
             }
             .bright{
-                background-color: rgb(145, 138, 124);
+                background-color: rgb(186, 172, 144);
                 border-radius: 50%;
                 &:checked::after{
-                    background-color: rgb(145, 138, 124);
+                    background-color: rgb(186, 172, 144);
                 }
                 @include radio-conf()
             }

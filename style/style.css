@@ -265,7 +265,7 @@
   visibility: visible;
 }
 .container .indicators-cont .indicators-int .bright {
-  background-color: rgb(145, 138, 124);
+  background-color: rgb(186, 172, 144);
   border-radius: 50%;
   position: relative;
   height: 22px;
@@ -277,7 +277,7 @@
   cursor: pointer;
 }
 .container .indicators-cont .indicators-int .bright:checked::after {
-  background-color: rgb(145, 138, 124);
+  background-color: rgb(186, 172, 144);
 }
 .container .indicators-cont .indicators-int .bright:before {
   content: "";
