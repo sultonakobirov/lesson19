@@ -76,7 +76,7 @@ extIntChanger.addEventListener('click', () => {
         interior.style.display = 'flex'
         exterior.style.display = 'none'
         indicatorCont.style.gap = '80px'
-        imgCont.setAttribute("style","height:700px");
+        imgCont.setAttribute("style","height:760px");
         extIntFunction(interior, exterior)
     }
 })
